@@ -110,7 +110,7 @@ sub posix2oracle {
     my ($format) = @_;
     # regex from DateTime
     $format =~ s/
-                    (%{\w+})
+                    (%\{\w+})
                 /
                     $formats{$1} ? $formats{$1} : "\%$1"
                 /sgex;
